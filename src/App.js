@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import {useState} from 'react'
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
+import Footer from './Components/Footer/Footer';
+import NavBar from './Components/NavBar/NavBar';
+import ConnectMe from './Pages/ConnectMe';
+import HomePage from './Pages/HomePage';
+import Skills from './Pages/Skills';
 
 function App() {
+  const [page, setPage] = useState(0)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HashRouter>
+      <NavBar pageNum={page}/>
+      <Routes>
+        <Route path='/' element={<HomePage setPage={setPage}/>}/>
+        <Route path='/connect' element={<ConnectMe setPage={setPage}/>}/>
+        <Route path='/skills' element={<Skills setPage={setPage}/>}/>
+      </Routes>
+      <Footer/>
+      </HashRouter>
     </div>
   );
 }
