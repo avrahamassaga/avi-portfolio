@@ -9,14 +9,14 @@ export default function SaleTitle(props) {
         {!isBroken ? (
           <div
             onClick={() => setIsBroken(false)}
-            className="cursor-pointer w-56 rounded-full h-8 bg-gradient-to-r from-[#44306f] to-[#5761ba]  gap-2 flex items-center justify-center"
+            className="sm:cursor-pointer w-56 rounded-full h-8 bg-gradient-to-r from-[#44306f] to-[#5761ba]  gap-2 flex items-center justify-center"
           >
             ✨<p>נפצו את הקוביה</p>✨
           </div>
         ) : (
           <div
             onClick={() => setIsBroken(false)}
-            className="cursor-pointer w-56 rounded-full h-8 bg-gradient-to-r from-[#44306f] to-[#5761ba]  gap-2 flex items-center justify-center"
+            className="sm:cursor-pointer w-56 rounded-full h-8 bg-gradient-to-r from-[#44306f] to-[#5761ba]  gap-2 flex items-center justify-center"
           >
             💫
             <p>הגרל מחדש</p>

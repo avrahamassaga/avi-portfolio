@@ -29,7 +29,7 @@ const MinecraftCube = (props) => {
 
 
   return (
-    <div onClick={handleClicks} ref={containerRef} className={classNames('container flex h-[220px] items-center justify-center relative', clicks !== 0 ? '': 'animate-pulse')}>
+    <div onClick={handleClicks} ref={containerRef} className={classNames('container sm:cursor-pointer flex h-[220px] items-center justify-center relative', clicks !== 0 ? '': 'animate-pulse')}>
         <div className={classNames('w-[200px] h-[200px]  relative', isBroken ? 'hidden' : '')} >
         <img
             src={block[clicks]}
